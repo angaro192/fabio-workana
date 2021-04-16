@@ -12,4 +12,6 @@ app.get('/', (req, res) => {
   return res.send('Hello')
 })
 
-app.listen(serverPort)
+app.listen(serverPort, () => {
+  console.log("Server online")
+})
