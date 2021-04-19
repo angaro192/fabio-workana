@@ -8,7 +8,8 @@ Usuarios.init({
     usuario: Sequelize.STRING,
     senha: Sequelize.STRING,
     ck: Sequelize.STRING,
-    cs: Sequelize.STRING
+    cs: Sequelize.STRING,
+    loja: Sequelize.STRING
 },{
     sequelize,
     modelName: 'usuarios',

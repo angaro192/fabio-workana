@@ -21,11 +21,11 @@ module.exports = {
         }
     },
     async create(req, res) {
-        const { usuario, senha, ck, cs } = req.body
+        const { usuario, senha, ck, cs, loja } = req.body
         try{
             const usuarios = await Usuario.findOne({ where: { usuario: usuario } })
             if(usuarios == null){
-                const result = await Usuario.create({usuario, senha, ck, cs})
+                const result = await Usuario.create({usuario, senha, ck, cs, loja})
                 return res.json(result)
             }else{
                 return res.json({error: "Usuario já existe"})
