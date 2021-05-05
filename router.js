@@ -1,8 +1,8 @@
 const express = require('express')
 const routes = express.Router()
 
-const UsuariosController = require('./controller/usuariosController')
-const ProdutosController = require('./controller/ProdutosController')
+const UsuariosController = require('./controllers/UsuariosController')
+const ProdutosController = require('./controllers/ProdutoController')
 
 routes.post('/usuarios', UsuariosController.list)
 routes.post('/cad', UsuariosController.create)
